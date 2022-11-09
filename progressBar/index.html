@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Progress Steps</title>
+  </head>
+
+  <body>
+    <!-- DESKTOP NAV -->
+    <div class="desktopNav">
+      <div class="icon">
+        <button type="button" class="toggle" id="toggle">
+          <span></span>
+        </button>
+      </div>
+
+      <div class="sidebar" id="sidebar">
+        <ul>
+          <li><a href="">Home</a></li>
+          <li><a href="">About</a></li>
+          <li><a href="">Shop</a></li>
+          <li><a href="">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- MOBILE NAV -->
+
+    <div class="mobileNav">
+      <ul id="navbar" class="closed">
+        <li class="menu-item hidden">
+          <i class="fas fa-home"></i>
+        </li>
+        <li class="menu-item hidden">
+          <i class="fa-solid fa-user"></i>
+        </li>
+        <li class="menu-item main">
+          <i class="fa-solid fa-plus"></i>
+        </li>
+        <li class="menu-item hidden">
+          <i class="fa-sharp fa-solid fa-cart-shopping"></i>
+        </li>
+        <li class="menu-item hidden">
+          <i class="fa-solid fa-envelope"></i>
+        </li>
+      </ul>
+    </div>
+
+    <div class="container" id="container">
+      <div class="progress-container">
+        <div class="progress" id="progress"></div>
+        <div class="circle active">
+          <p>Select</p>
+        </div>
+        <div class="circle">
+          <p>Order</p>
+        </div>
+        <div class="circle">
+          <p>Success</p>
+        </div>
+        <div class="circle">
+          <p>In transit</p>
+        </div>
+      </div>
+
+      <button class="btn" id="prev" disabled>Prev</button>
+      <button class="btn" id="next">Next</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
