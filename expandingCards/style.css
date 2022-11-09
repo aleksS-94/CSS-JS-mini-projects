@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #e3d6ce;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  justify-content: space-evenly;
+  background-color: #a69f8e;
+  top: 0;
+  width: 100%;
+  height: 126px;
+  z-index: 1;
+}
+
+h1 {
+  font-family: "Caveat", cursive;
+  position: absolute;
+  left: 45%;
+  top: 6%;
+  transform: translateX(-42%);
+  /*when setting left:50% it puts the beginning of h1 at 50%
+     and we want the middle of it being centered so use transform translate to center it */
+  white-space: nowrap; /*to wrap the heading into one line instead of 2*/
+  align-self: center;
+  right: 45%;
+  font-size: 52px;
+  font-weight: 500;
+  letter-spacing: 4px;
+  margin: 0;
+  animation: fadeIn 5s;
+  color: #dbdbdb;
+  text-shadow: 1px 1px 0 #7d7562, 1px 13px 5px #a69f8e;
+}
+
+h1::first-letter {
+  color: #563521;
+  font-weight: bold;
+}
+
+h2 {
+  font-family: "Dancing Script", cursive;
+  position: absolute;
+  left: 59%;
+  top: 20%;
+  transform: translateX(-56%);
+  margin-bottom: 10px;
+  font-size: 40px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  color: #dbdbdb;
+  text-shadow: 1px 1px 0 #7d7562, 1px 13px 5px #a69f8e;
+  white-space: nowrap;
+  animation: fadeIn 5s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+h2::first-letter,
+.spa {
+  color: #563521;
+  font-weight: bold;
+}
+
+.container {
+  display: flex;
+  width: 90vw;
+  margin: 95px 0 0 70px;
+}
+.panel {
+  background-size: auto 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 78vh;
+  border: 1.5px solid rgba(87, 94, 111, 0.6);
+  border-radius: 50px;
+  color: #fff;
+  cursor: pointer;
+  flex: 0.5;
+  margin: 31px 10px;
+  position: relative;
+  transition: flex 0.7s ease-in;
+}
+
+.panel:hover {
+  opacity: 0.6;
+  transition: opacity 0.4s ease;
+}
+
+.panel h3 {
+  font-family: "Caveat", cursive;
+  font-size: 23px;
+  letter-spacing: 1.5px;
+  position: absolute;
+  bottom: 20px;
+  left: 50px;
+  margin: 0;
+  opacity: 0;
+  color: #563521;
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 10px;
+  border-radius: 20px;
+}
+.panel.active {
+  flex: 5;
+}
+.panel.active h3 {
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
+}
+
+/* --------------------------------------------- */
+/* -------------  Mobile  --------------- */
+/* --------------------------------------------- */
+
+@media only screen and (max-width: 780px) {
+  html {
+    margin: 0;
+    padding: 0;
+    overflow: initial;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+  .body {
+    width: 100vw;
+    height: auto;
+    overflow: initial;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+  .navbar {
+    justify-content: center;
+    top: 0;
+    width: 100%;
+    height: 90px;
+  }
+
+  h1 {
+    top: 3%;
+    transform: translateX(-20%);
+    font-size: 40px;
+    letter-spacing: 2px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+  }
+  h2 {
+    left: 40%;
+    top: 18%;
+    transform: translateX(-20%);
+    margin-bottom: 5px;
+    font-size: 35px;
+  }
+  .container {
+    width: 100vw;
+    margin-left: 0;
+    flex-direction: column;
+    height: calc(100vh - 100px);
+    overflow-y: scroll;
+  }
+  .panel {
+    background-size: cover;
+    flex: 0.6;
+    width: 100vw;
+    margin: 30px 0 0 0;
+  }
+  .panel:nth-of-type(5) {
+    margin-bottom: 30px;
+  }
+  .panel.active {
+    flex: 8;
+  }
+  .panel:hover {
+    opacity: 0.9;
+  }
+  .panel h3 {
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+}
