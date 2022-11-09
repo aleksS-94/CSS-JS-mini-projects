@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Rotating Navigation</title>
+  </head>
+
+  <body>
+    <div class="mobileOnly">
+      <h3 class="fixed">Tap the letters!</h3>
+      <div class="word">
+        <span>S</span>
+        <span>O</span>
+        <span>R</span>
+        <span>R</span>
+        <span>Y</span>
+      </div>
+      <h3 class="fixedBottom">I'm wrapped up in Desktop only</h3>
+    </div>
+
+    <div class="container">
+      <div class="circle-container">
+        <div class="circle">
+          <button id="close">
+            <i class="fas fa-times"></i>
+          </button>
+          <button id="open">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="intro">
+          <h1>Effective sleeping tips</h1>
+          <small>Aleks Smith</small>
+          <p class="subHeading">
+            Improve the quality of your sleep by implementing these habits
+          </p>
+        </div>
+
+        <img src="./assets/sleep.jpg" />
+        <p>
+          Research
+          <a
+            href="https://docs.google.com/document/d/1XHGvnqrbAup5uG_YauYl_V9yXX1inD5eVVAOrDSeRFE/edit"
+            target="_blank"
+            >[1]</a
+          >
+          conducted in March 2021 concluded that around a third of adults living
+          in the UK suffer from insomnia. When you are deprived of sleep, due to
+          the amygdala being more reactive, you will be more likely to seek
+          sensations or rewards. That, in turn, can cause further problems, like
+          weight gain or addictions. You may also experience a decreased
+          capacity to learn and memorise.
+        </p>
+
+        <h3>Here are some tips to help you sleep better:</h3>
+        <ol>
+          <li>Go to bed at regular times every night.</li>
+          <p>
+            Developing your own bedtime routine may be a useful strategy to
+            configure your biological clock, which helps regulate the circadian
+            rhythm of your body. Once your body is programmed to sleep on your
+            scheduled time you will not need to think about it, your internal
+            body clock is there to make sure that you become fatigued,
+            increasing your chances of having a restful sleep.
+          </p>
+          <li>Reduce blue light exposure at night.</li>
+          <p>
+            Studies have shown that exposure to blue light reduces the
+            production of melatonin( often referred to as the sleep hormone).
+            Melatonin production occurs in the pineal gland and is elicited by
+            darkness. Light, however, stops it.
+          </p>
+
+          <blockquote>
+            <p>
+              “Normally, blue light peaks in the morning, signalling your body
+              to wake up for the day. Red light increases in the evening,
+              signalling that it is time to wind down and go to bed. By
+              interrupting this natural cycle with the blue light emitted by
+              electronic devices, the normal sleep-wake cycles are thrown out of
+              whack.”<a
+                href="https://www.verywellmind.com/
+                            how-do-smartphones-affect-the-brain-2794892"
+                target="_blank"
+                >[2]</a
+              >
+            </p>
+          </blockquote>
+          <li>Put your phone away 30 minutes before bed.</li>
+          <p>
+            Aside from the negative effects of blue light on melatonin release,
+            poor sleep quality can also be caused by excessive brain stimulation
+            during bedtime. These days, mobile phones give us access to all
+            kinds of entertainment, including videos, games, and social
+            networks, all of which contribute to hyperarousal. Excessive brain
+            stimulation pre-bedtime is likely to cause you to feel alert, which
+            in turn has an effect on the quality of your sleep.Make sure to
+            switch off your devices at least 30 minutes before bed.
+          </p>
+        </ol>
+      </div>
+      <div id="goUp" onclick="topFunction()">
+        <span class="goUpIcon"><i class="fa-solid fa-angles-up"></i></span>
+      </div>
+    </div>
+
+    <nav>
+      <ul>
+        <li><i class="fas fa-home"></i>Blog</li>
+        <li><i class="fas fa-user-alt"></i>About</li>
+        <li><i class="fas fa-envelope"></i>Email</li>
+      </ul>
+    </nav>
+    <script src="script.js"></script>
+  </body>
+</html>
